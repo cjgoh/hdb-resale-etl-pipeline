@@ -1,0 +1,50 @@
+HDB Data Platform Deployment Checklist
+--------------------------------------
+
+1. Environment Setup
+- [ ] Install Terraform
+- [ ] Configure AWS CLI with correct credentials
+- [ ] Verify IAM permissions for VPC, S3, Lambda, Glue, Athena, CloudTrail
+
+2. Networking
+- [ ] Create VPC (CIDR block e.g. 10.0.0.0/16)
+- [ ] Create public subnet (for NAT Gateway)
+- [ ] Create private subnet (for Lambda, Glue, S3, Athena)
+- [ ] Deploy Internet Gateway and attach to VPC
+- [ ] Deploy NAT Gateway in public subnet with Elastic IP
+- [ ] Configure route tables (public → IGW, private → NAT)
+
+3. Storage
+- [ ] Create S3 buckets: Raw, Cleaned, Transformed, Failed, Hashed
+- [ ] Enable S3 encryption (KMS)
+- [ ] Configure bucket policies for restricted access
+- [ ] Set up partitioning scheme (year/month/town)
+
+4. Security
+- [ ] Create IAM roles for Lambda, Glue, Athena, S3
+- [ ] Attach least-privilege policies
+- [ ] Enable CloudTrail for logging
+- [ ] Configure CloudWatch alarms for job failures
+
+5. Compute & ETL
+- [ ] Deploy Lambda ingestion function (lambda.zip)
+- [ ] Test Lambda connectivity to data.gov.sg via NAT Gateway
+- [ ] Deploy Glue ETL job with script in S3
+- [ ] Create Glue Data Catalog database and tables
+
+6. Query & Analytics
+- [ ] Deploy Athena workgroup
+- [ ] Verify Athena queries run against Transformed S3 data
+- [ ] Deploy VPC Endpoint / PrivateLink for Athena → Tableau
+- [ ] Configure Tableau to connect via Athena driver
+
+7. Validation
+- [ ] Run ETL pipeline end-to-end
+- [ ] Check Failed dataset for duplicates/anomalies
+- [ ] Verify Hashed dataset includes irreversible hashed Resale Identifier
+- [ ] Confirm Tableau dashboards load data via Athena
+
+8. Documentation
+- [ ] Update README with assumptions and deployment steps
+- [ ] Document heuristics for anomaly detection and hashing algorithm
+- [ ] Include architecture diagram (PNG) showing ingestion + exploitation flows
