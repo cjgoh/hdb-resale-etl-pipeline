@@ -81,7 +81,37 @@ HDB Data Platform Deployment Checklist
 - [ ] Document recovery steps if ETL pipeline fails
 - [ ] Test restoring data from S3 versioning or Glacier
 
-13. Team Handover
+13. Logging & Observability
+- [ ] Centralize logs (Lambda, Glue, Athena) into CloudWatch Logs
+- [ ] Set log retention policies (e.g., 30 days for dev, 1 year for prod)
+- [ ] Add dashboards for pipeline health (success/failure counts, ingestion latency)
+
+14. Secrets Management
+- [ ] Store API keys or credentials in AWS Secrets Manager or Parameter Store
+- [ ] Ensure Lambda functions read secrets securely (no hardcoding)
+- [ ] Rotate secrets regularly
+
+15. Compliance & Audit
+- [ ] Document data retention policies (raw vs transformed data)
+- [ ] Ensure encryption in transit (TLS) and at rest (KMS)
+- [ ] Review IAM roles for least-privilege compliance
+
+16. Scaling & Performance
+- [ ] Configure Lambda concurrency limits to avoid throttling
+- [ ] Tune Glue job worker type and DPUs for large files
+- [ ] Use Athena workgroup settings to enforce query limits and cost controls
+
+17. Multi-Environment Setup
+- [ ] Define separate workspaces for Dev, Test, and Prod in Terraform
+- [ ] Parameterize bucket names, VPC IDs, and resource tags
+- [ ] Test pipeline in Dev before promoting to Prod
+
+18. Cleanup & Lifecycle
+- [ ] Provide terraform destroy instructions for safe teardown
+- [ ] Add lifecycle rules to delete temporary files in Raw zone after X days
+- [ ] Archive Cleaned/Transformed data periodically to Glacier
+
+19. Team Handover
 - [ ] Provide onboarding guide for new engineers
 - [ ] Share architecture diagram and README in repo
 - [ ] Document cleanup steps (terraform destroy) to avoid orphaned resources
