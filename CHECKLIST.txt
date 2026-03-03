@@ -1,10 +1,13 @@
 HDB Data Platform Deployment Checklist
 --------------------------------------
 
-1. Environment Setup
-- [ ] Install Terraform
+1. Pre-Deployment
+- [ ] Confirm AWS account billing alerts are enabled
+- [ ] Verify correct AWS region (e.g., ap-southeast-1 for Singapore)
+- [ ] Ensure Terraform is installed
 - [ ] Configure AWS CLI with correct credentials
 - [ ] Verify IAM permissions for VPC, S3, Lambda, Glue, Athena, CloudTrail
+- [ ] Configure Terraform state backend (S3 + DynamoDB) if team deployment
 
 2. Networking
 - [ ] Create VPC (CIDR block e.g. 10.0.0.0/16)
@@ -25,6 +28,9 @@ HDB Data Platform Deployment Checklist
 - [ ] Attach least-privilege policies
 - [ ] Enable CloudTrail for logging
 - [ ] Configure CloudWatch alarms for job failures
+- [ ] Restrict S3 buckets (no public access)
+- [ ] Rotate IAM access keys regularly
+- [ ] Verify KMS key policies allow only authorized roles
 
 5. Compute & ETL
 - [ ] Deploy Lambda ingestion function (lambda.zip)
@@ -38,13 +44,20 @@ HDB Data Platform Deployment Checklist
 - [ ] Deploy VPC Endpoint / PrivateLink for Athena → Tableau
 - [ ] Configure Tableau to connect via Athena driver
 
-7. Validation
+7. Monitoring & Alerts
+- [ ] Set CloudWatch metrics for Lambda duration, errors, throttles
+- [ ] Add Glue job success/failure notifications (SNS or email)
+- [ ] Enable Athena query logging to CloudWatch
+
+8. Validation
 - [ ] Run ETL pipeline end-to-end
 - [ ] Check Failed dataset for duplicates/anomalies
 - [ ] Verify Hashed dataset includes irreversible hashed Resale Identifier
 - [ ] Confirm Tableau dashboards load data via Athena
+- [ ] Test partitioning improves query performance (with filters)
 
-8. Documentation
+9. Documentation & Handover
 - [ ] Update README with assumptions and deployment steps
 - [ ] Document heuristics for anomaly detection and hashing algorithm
 - [ ] Include architecture diagram (PNG) showing ingestion + exploitation flows
+- [ ] Provide instructions for cleanup (terraform destroy) to avoid costs
