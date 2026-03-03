@@ -4,8 +4,7 @@ HDB Data Platform Deployment Checklist
 1. Pre-Deployment
 - [ ] Confirm AWS account billing alerts are enabled
 - [ ] Verify correct AWS region (e.g., ap-southeast-1 for Singapore)
-- [ ] Ensure Terraform is installed
-- [ ] Configure AWS CLI with correct credentials
+- [ ] Install Terraform and configure AWS CLI with credentials
 - [ ] Verify IAM permissions for VPC, S3, Lambda, Glue, Athena, CloudTrail
 - [ ] Configure Terraform state backend (S3 + DynamoDB) if team deployment
 
@@ -22,6 +21,8 @@ HDB Data Platform Deployment Checklist
 - [ ] Enable S3 encryption (KMS)
 - [ ] Configure bucket policies for restricted access
 - [ ] Set up partitioning scheme (year/month/town)
+- [ ] Enable S3 versioning for disaster recovery
+- [ ] Configure lifecycle policies (archive older data to Glacier)
 
 4. Security
 - [ ] Create IAM roles for Lambda, Glue, Athena, S3
@@ -31,23 +32,27 @@ HDB Data Platform Deployment Checklist
 - [ ] Restrict S3 buckets (no public access)
 - [ ] Rotate IAM access keys regularly
 - [ ] Verify KMS key policies allow only authorized roles
+- [ ] Document network segmentation (public vs private)
 
 5. Compute & ETL
 - [ ] Deploy Lambda ingestion function (lambda.zip)
 - [ ] Test Lambda connectivity to data.gov.sg via NAT Gateway
 - [ ] Deploy Glue ETL job with script in S3
 - [ ] Create Glue Data Catalog database and tables
+- [ ] Document data validation rules (Date, Town, Flat Type, Flat Model, Storey Range)
 
 6. Query & Analytics
 - [ ] Deploy Athena workgroup
 - [ ] Verify Athena queries run against Transformed S3 data
 - [ ] Deploy VPC Endpoint / PrivateLink for Athena → Tableau
 - [ ] Configure Tableau to connect via Athena driver
+- [ ] Test Tableau extracts for caching and faster dashboards
 
 7. Monitoring & Alerts
 - [ ] Set CloudWatch metrics for Lambda duration, errors, throttles
 - [ ] Add Glue job success/failure notifications (SNS or email)
 - [ ] Enable Athena query logging to CloudWatch
+- [ ] Benchmark Glue job execution time and optimize partitioning
 
 8. Validation
 - [ ] Run ETL pipeline end-to-end
@@ -55,9 +60,28 @@ HDB Data Platform Deployment Checklist
 - [ ] Verify Hashed dataset includes irreversible hashed Resale Identifier
 - [ ] Confirm Tableau dashboards load data via Athena
 - [ ] Test partitioning improves query performance (with filters)
+- [ ] Review CloudTrail logs to ensure all actions are captured
 
-9. Documentation & Handover
-- [ ] Update README with assumptions and deployment steps
-- [ ] Document heuristics for anomaly detection and hashing algorithm
-- [ ] Include architecture diagram (PNG) showing ingestion + exploitation flows
-- [ ] Provide instructions for cleanup (terraform destroy) to avoid costs
+9. Cost Management
+- [ ] Set up AWS Budgets and billing alerts
+- [ ] Tag all resources (e.g., Project=HDB, Environment=Dev/Prod)
+- [ ] Document estimated monthly costs for S3, Glue, Lambda, Athena, Tableau
+
+10. CI/CD & Automation
+- [ ] Store Terraform code in Git (with version control)
+- [ ] Configure CI/CD pipeline (GitHub Actions, CodePipeline) for automated deployments
+- [ ] Add terraform fmt and terraform validate checks in CI
+
+11. Data Governance
+- [ ] Define schema evolution strategy in Glue Data Catalog
+- [ ] Maintain audit logs of failed records (duplicates, anomalies)
+- [ ] Document anomaly detection heuristics and hashing algorithm choice
+
+12. Disaster Recovery
+- [ ] Document recovery steps if ETL pipeline fails
+- [ ] Test restoring data from S3 versioning or Glacier
+
+13. Team Handover
+- [ ] Provide onboarding guide for new engineers
+- [ ] Share architecture diagram and README in repo
+- [ ] Document cleanup steps (terraform destroy) to avoid orphaned resources
