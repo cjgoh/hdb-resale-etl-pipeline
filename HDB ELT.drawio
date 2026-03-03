@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.0">
+  <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
+    <mxGraphModel dx="1382" dy="1281" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="54sLnAzViyOIR_hZKTAb-83" parent="1" style="container=1;collapsible=0;expand=0;recursiveResize=0;html=1;whiteSpace=wrap;strokeColor=light-dark(#1192E8, #e89a11);fillColor=none;strokeWidth=1" value="" vertex="1">
+          <mxGeometry height="567.34" width="720" x="410" y="92.66" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-84" parent="54sLnAzViyOIR_hZKTAb-83" style="shape=rect;fillColor=none;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" value="Private VPC (HDB Data platform)" vertex="1">
+          <mxGeometry height="48" relative="1" width="48" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-85" parent="54sLnAzViyOIR_hZKTAb-84" style="fillColor=#1192E8;shape=mxgraph.ibm_cloud.network--public;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-86" parent="54sLnAzViyOIR_hZKTAb-83" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="48" relative="1" width="4" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-41" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda;fillColor=#F58534;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="93" width="76.5" x="50" y="107.16999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-43" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.s3;fillColor=#E05243;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="93" width="76.5" x="170" y="38.83999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-44" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="54sLnAzViyOIR_hZKTAb-43" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="147.34" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-45" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.glue;fillColor=#F58534;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="99" width="82.5" x="167" y="237.34" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-46" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-45" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-47" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.s3;fillColor=#E05243;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="93" width="76.5" x="170" y="457.34000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-48" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-47" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-90" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-89" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-49" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.s3;fillColor=#E05243;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="93" width="76.5" x="380" y="457.34000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-50" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-49" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-92" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-91" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-89" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.glue;fillColor=#F58534;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="99" width="82.5" x="377" y="237.34" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-100" edge="1" parent="54sLnAzViyOIR_hZKTAb-83" source="54sLnAzViyOIR_hZKTAb-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-94" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-91" parent="54sLnAzViyOIR_hZKTAb-83" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.athena;fillColor=#F58534;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="76.5" width="76.5" x="380" y="47.09000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-94" parent="54sLnAzViyOIR_hZKTAb-83" style="rounded=0;whiteSpace=wrap;html=1;" value="Tableau&amp;nbsp;" vertex="1">
+          <mxGeometry height="70" width="130" x="580" y="185.17000000000002" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-101" parent="54sLnAzViyOIR_hZKTAb-83" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.privatelink;" value="" vertex="1">
+          <mxGeometry height="56.699999999999996" width="56.1" x="616.95" y="56.99000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-103" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="AWS Lambda&lt;br&gt;Batch Ingestion Jobs" vertex="1">
+          <mxGeometry height="40" width="140" x="18.25" y="200.17000000000002" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-126" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="S3 -&amp;nbsp; Raw Zone" vertex="1">
+          <mxGeometry height="40" width="140" x="210" y="123.59" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-127" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="Glue - ETL Processing" vertex="1">
+          <mxGeometry height="40" width="140" x="230" y="320.34000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-128" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="S3 Cleaned Zone" vertex="1">
+          <mxGeometry height="40" width="140" x="30" y="497.34000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-129" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="S3 Transformed Zone" vertex="1">
+          <mxGeometry height="40" width="140" x="459.5" y="487.34000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-130" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="Glue - Data Catalog" vertex="1">
+          <mxGeometry height="40" width="140" x="440" y="320.34000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-131" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="Athena - SQL Query Service" vertex="1">
+          <mxGeometry height="40" width="140" x="440" y="113.69000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-132" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="PrivateLink (Secure Routing)" vertex="1">
+          <mxGeometry height="40" width="140" x="550" y="16.99000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-133" parent="54sLnAzViyOIR_hZKTAb-83" style="text;whiteSpace=wrap;html=1;align=center;" value="Tableau - Analytics and Visualization" vertex="1">
+          <mxGeometry height="40" width="140" x="590" y="266.84000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-51" parent="1" style="container=1;collapsible=0;expand=0;recursiveResize=0;html=1;whiteSpace=wrap;strokeColor=#1192E8;fillColor=none;strokeWidth=1" value="" vertex="1">
+          <mxGeometry height="307.34" width="166" x="40" y="92.66" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-52" parent="54sLnAzViyOIR_hZKTAb-51" style="shape=rect;fillColor=none;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" value="Public Network" vertex="1">
+          <mxGeometry height="48" relative="1" width="48" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-53" parent="54sLnAzViyOIR_hZKTAb-52" style="fillColor=#1192E8;shape=mxgraph.ibm_cloud.network--public;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-54" parent="54sLnAzViyOIR_hZKTAb-51" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="48" relative="1" width="4" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-34" parent="54sLnAzViyOIR_hZKTAb-51" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/devops/API_Connections.svg;" value="" vertex="1">
+          <mxGeometry height="45.32" width="68" x="54" y="131.01" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-102" parent="54sLnAzViyOIR_hZKTAb-51" style="text;whiteSpace=wrap;html=1;align=center;" value="Public API data.gov.sg" vertex="1">
+          <mxGeometry height="40" width="140" x="18" y="187.34" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-59" parent="1" style="container=1;collapsible=0;expand=0;recursiveResize=0;html=1;whiteSpace=wrap;strokeColor=light-dark(#1192E8, #e89a11);fillColor=none;strokeWidth=1" value="" vertex="1">
+          <mxGeometry height="307.34" width="160" x="220" y="92.66" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-60" parent="54sLnAzViyOIR_hZKTAb-59" style="shape=rect;fillColor=none;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" value="Public Subnet" vertex="1">
+          <mxGeometry height="48" relative="1" width="48" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-61" parent="54sLnAzViyOIR_hZKTAb-60" style="fillColor=#1192E8;shape=mxgraph.ibm_cloud.network--public;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;" value="" vertex="1">
+          <mxGeometry height="24" relative="1" width="24" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-62" parent="54sLnAzViyOIR_hZKTAb-59" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="48" relative="1" width="4" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-35" parent="54sLnAzViyOIR_hZKTAb-59" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.vpc_nat_gateway;fillColor=#F58534;gradientColor=none;" value="" vertex="1">
+          <mxGeometry height="72" width="69" x="45.5" y="117.67" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-135" parent="54sLnAzViyOIR_hZKTAb-59" style="text;whiteSpace=wrap;html=1;align=center;" value="NAT Gateway" vertex="1">
+          <mxGeometry height="40" width="140" x="10" y="189.67" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-36" edge="1" parent="1" source="54sLnAzViyOIR_hZKTAb-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-88" edge="1" parent="1" source="54sLnAzViyOIR_hZKTAb-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="54sLnAzViyOIR_hZKTAb-41" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="54sLnAzViyOIR_hZKTAb-136" parent="1" style="text;whiteSpace=wrap;html=1;align=left;" value="Security Requirements:&lt;li&gt;&lt;p&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;strong&gt;IAM Roles &amp;amp; Policies&lt;/strong&gt; (attached to Lambda/Glue/Athena/Tableau).&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;strong&gt;S3 Encryption (KMS)&lt;/strong&gt; (next to each S3 bucket).&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;&lt;strong&gt;CloudTrail Logging&lt;/strong&gt; (at the VPC boundary).&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p style=&quot;&quot;&gt;&lt;span style=&quot;white-space-collapse: preserve;&quot;&gt;Private VPC segmentation&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;" vertex="1">
+          <mxGeometry height="170" width="390" x="40" y="420" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;  &#xa;This architecture illustrates the end-to-end data pipeline for HDB resale flat analysis. Data is ingested securely from the public &lt;span role=&quot;button&quot; tabindex=&quot;0&quot; data-url=&quot;https://data.gov.sg&quot; aria-label=&quot;data.gov.sg, this will take you to data.gov.sg&quot; style=&quot;white-space: pre-wrap;&quot;&gt;data.gov.sg &lt;/span&gt; API through a NAT Gateway into a private VPC, where AWS Lambda and Glue handle batch ingestion and ETL processing. Raw, cleaned, and transformed datasets are stored in Amazon S3. The transformed data is registered in the Glue Data Catalog and queried via Amazon Athena, with traffic routed privately through AWS PrivateLink to Tableau on AWS for visualization. Security is enforced through IAM roles, S3 encryption, CloudTrail logging, and strict VPC segmentation, ensuring scalability, performance, and compliance.&lt;/span&gt;&lt;/p&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;/div&gt;" link="&lt;p style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space: pre-wrap;&quot;&gt;  &#xa;This architecture illustrates the end-to-end data pipeline for HDB resale flat analysis. Data is ingested securely from the public &lt;span role=&quot;button&quot; tabindex=&quot;0&quot; data-url=&quot;https://data.gov.sg&quot; aria-label=&quot;data.gov.sg, this will take you to data.gov.sg&quot; style=&quot;white-space: pre-wrap;&quot;&gt;data.gov.sg &lt;/span&gt; API through a NAT Gateway into a private VPC, where AWS Lambda and Glue handle batch ingestion and ETL processing. Raw, cleaned, and transformed datasets are stored in Amazon S3. The transformed data is registered in the Glue Data Catalog and queried via Amazon Athena, with traffic routed privately through AWS PrivateLink to Tableau on AWS for visualization. Security is enforced through IAM roles, S3 encryption, CloudTrail logging, and strict VPC segmentation, ensuring scalability, performance, and compliance.&lt;/span&gt;&lt;/p&gt;&lt;div style=&quot;white-space: normal;&quot;&gt;&lt;/div&gt;" id="54sLnAzViyOIR_hZKTAb-137">
+          <mxCell parent="1" style="text;whiteSpace=wrap;html=1;fontSize=16;" vertex="1">
+            <mxGeometry height="180" width="1090" x="40" y="660" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
